@@ -3,9 +3,14 @@ import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
 
 function CollapsibleExample() {
   const [user, setUser] = useState("");
+
+  const [session] = useAuthState(auth);
+  // const session = false;
 
   const logoutUser = async () => {};
 
@@ -49,12 +54,16 @@ function CollapsibleExample() {
                 width: 200,
               }}
             >
-              <Button onClick={logoutUser} variant="danger">
-                Logout
-              </Button>
-              <Button onClick={logoutUser} variant="primary">
-                Login
-              </Button>
+              {session && (
+                <Button onClick={logoutUser} variant="danger">
+                  Logout
+                </Button>
+              )}
+              {!session && (
+                <Button onClick={logoutUser} variant="primary">
+                  Login
+                </Button>
+              )}
             </div>
           </Nav>
         </Navbar.Collapse>

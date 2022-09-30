@@ -7,7 +7,6 @@ function WithHeaderExample() {
       <Card
         style={{
           marginBottom: 20,
-          marginBottom: 10,
         }}
       >
         <Card.Header>Featured</Card.Header>
@@ -23,7 +22,6 @@ function WithHeaderExample() {
       <Card
         style={{
           marginBottom: 20,
-          marginBottom: 10,
         }}
       >
         <Card.Header>Featured</Card.Header>
@@ -39,7 +37,6 @@ function WithHeaderExample() {
       <Card
         style={{
           marginBottom: 20,
-          marginBottom: 10,
         }}
       >
         <Card.Header>Featured</Card.Header>
