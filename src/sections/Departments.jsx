@@ -9,10 +9,15 @@ import Health from "../assets/health.jpg";
 import Administration from "../assets/administration.jpg";
 import ICT from "../assets/ICT.jpg";
 import PublicService from "../assets/public-service.jpg";
-import Agriculture from "../assets/agriculture.jpg"
-import Livestock from "../assets/livestock.jpg"
-import Water from "../assets/water.jpg"
-import Enviroment from "../assets/environment.jpg"
+import Agriculture from "../assets/agriculture.jpg";
+import Livestock from "../assets/livestock.jpg";
+import Water from "../assets/water.jpg";
+import Enviroment from "../assets/environment.jpg";
+import Transport from "../assets/transport.jpg";
+import Tourism from "../assets/tourism.jpg";
+import Youth from "../assets/youth.jpg";
+import Sports from "../assets/sports.jpg";
+import Municipality from "../assets/municipality.jpg";
 
 const data = [
   {
@@ -58,18 +63,43 @@ const data = [
   {
     id: "9",
     image: Livestock,
-    title: "Livestock"
+    title: "Livestock",
   },
   {
     id: "10",
     image: Water,
-    title: "Water"
+    title: "Water",
   },
   {
     id: "11",
     image: Enviroment,
-    title: "Environment"
-  }
+    title: "Environment",
+  },
+  {
+    id: "12",
+    image: Transport,
+    title: "Transport",
+  },
+  {
+    id: "13",
+    image: Tourism,
+    title: "Tourism",
+  },
+  {
+    id: "14",
+    image: Youth,
+    title: "Youth",
+  },
+  {
+    id: "15",
+    image: Sports,
+    title: "Sports",
+  },
+  {
+    id: "16",
+    image: Municipality,
+    title: "Municipality",
+  },
 ];
 
 function GridExample() {

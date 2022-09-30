@@ -7,9 +7,11 @@ const Home = () => {
   return (
     <div>
       <Navigation />
-      <div style={{
-        margin: 20
-      }}>
+      <div
+        style={{
+          margin: 20,
+        }}
+      >
         <Points />
       </div>
     </div>
