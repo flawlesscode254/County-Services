@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "../firebase";
+import { auth, provider } from "../firebase";
 
 function CollapsibleExample() {
-  const [user, setUser] = useState("");
-
   const [session] = useAuthState(auth);
-  // const session = false;
 
-  const logoutUser = async () => {};
+  const loginUser = () => {
+    auth.signInWithPopup(provider);
+  };
+
+  const logoutUser = () => {
+    auth.signOut();
+  };
 
   return (
     <Navbar
@@ -29,19 +32,19 @@ function CollapsibleExample() {
             marginLeft: 30,
           }}
         >
-          County Government Services
+          Bomet County Government Services
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto"></Nav>
           <Nav>
-            {user && (
+            {session && (
               <Nav.Link
                 style={{
                   marginRight: 20,
                 }}
               >
-                {user.name}
+                {session.displayName}
               </Nav.Link>
             )}
             <div
@@ -54,13 +57,12 @@ function CollapsibleExample() {
                 width: 200,
               }}
             >
-              {session && (
+              {session ? (
                 <Button onClick={logoutUser} variant="danger">
                   Logout
                 </Button>
-              )}
-              {!session && (
-                <Button onClick={logoutUser} variant="primary">
+              ) : (
+                <Button onClick={loginUser} variant="primary">
                   Login
                 </Button>
               )}
