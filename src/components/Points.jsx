@@ -7,6 +7,7 @@ import Departments from "../sections/Departments";
 import AllProjects from "../sections/AllProjects";
 import Ongoing from "../sections/Ongoing";
 import Complete from "../sections/Complete";
+import Maps from "../sections/Maps";
 
 function LeftTabsExample() {
   return (
@@ -26,6 +27,9 @@ function LeftTabsExample() {
             <Nav.Item>
               <Nav.Link eventKey="fourth">Complete Projects</Nav.Link>
             </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="fifth">Project Stats</Nav.Link>
+            </Nav.Item>
           </Nav>
         </Col>
         <Col sm={9}>
@@ -41,6 +45,9 @@ function LeftTabsExample() {
             </Tab.Pane>
             <Tab.Pane eventKey="fourth">
               <Complete />
+            </Tab.Pane>
+            <Tab.Pane eventKey="fifth">
+              <Maps />
             </Tab.Pane>
           </Tab.Content>
         </Col>
