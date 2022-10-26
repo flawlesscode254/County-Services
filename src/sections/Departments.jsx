@@ -3,21 +3,21 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 import Education from "../assets/education.png";
-import Security from "../assets/security.jpg";
+import Security from "../assets/Security.jpg";
 import Development from "../assets/development.jpg";
-import Health from "../assets/health.jpg";
-import Administration from "../assets/administration.jpg";
+import Health from "../assets/Health.jpg";
+import Administration from "../assets/Administration.jpg";
 import ICT from "../assets/ICT.jpg";
-import PublicService from "../assets/public-service.jpg";
-import Agriculture from "../assets/agriculture.jpg";
+import PublicService from "../assets/Public service.jpg";
+import Agriculture from "../assets/Agriculture.jpg";
 import Livestock from "../assets/livestock.jpg";
-import Water from "../assets/water.jpg";
-import Enviroment from "../assets/environment.jpg";
-import Transport from "../assets/transport.jpg";
-import Tourism from "../assets/tourism.jpg";
+import Water from "../assets/Water.jpg";
+import Enviroment from "../assets/Environment.jpg";
+import Transport from "../assets/Transport.jpg";
+import Tourism from "../assets/Tourism.jpg";
 import Youth from "../assets/youth.jpg";
-import Sports from "../assets/sports.jpg";
-import Municipality from "../assets/municipality.jpg";
+import Sports from "../assets/Sports.jpg";
+import Municipality from "../assets/Municipality.jpg";
 
 const data = [
   {

@@ -32,7 +32,7 @@ function CollapsibleExample() {
             marginLeft: 30,
           }}
         >
-          Bomet County Government Services
+          Bomet County Development Projects Management Portal
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
