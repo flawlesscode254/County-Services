@@ -46,7 +46,13 @@ function LeftTabsExample() {
             <Tab.Pane eventKey="fourth">
               <Complete />
             </Tab.Pane>
-            <Tab.Pane eventKey="fifth">
+            <Tab.Pane
+              eventKey="fifth"
+              style={{
+                height: "100vh",
+                width: "100%",
+              }}
+            >
               <Maps />
             </Tab.Pane>
           </Tab.Content>
