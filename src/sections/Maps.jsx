@@ -38,7 +38,7 @@ const Maps = () => {
         {projects.map((item) => (
           <Marker
             key={item.data.id}
-            position={[item.data.y_coordinate, item.data.x_coordinate]}
+            position={[item.data.x_coordinate, item.data.y_coordinate]}
           >
             <Popup>
               <Card>
