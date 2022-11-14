@@ -2,8 +2,22 @@ import React, { useState, useEffect } from "react";
 import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
 import Card from "react-bootstrap/Card";
 import "../index.css";
+import L from "leaflet";
+
+import Green from "../assets/green.png";
+import Red from "../assets/red.png";
 
 import db from "../firebase";
+
+const completeIcon = new L.Icon({
+  iconUrl: Green,
+  iconSize: [40, 40],
+});
+
+const incompleteIcon = new L.Icon({
+  iconUrl: Red,
+  iconSize: [40, 40],
+});
 
 const Maps = () => {
   const [projects, setProjects] = useState([]);
@@ -33,12 +47,17 @@ const Maps = () => {
       >
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png"
+          url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
         />
         {projects.map((item) => (
           <Marker
             key={item.data.id}
             position={[item.data.x_coordinate, item.data.y_coordinate]}
+            icon={
+              item.data.complement_projects === ""
+                ? incompleteIcon
+                : completeIcon
+            }
           >
             <Popup>
               <Card>
