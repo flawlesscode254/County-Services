@@ -9,6 +9,8 @@ import Ongoing from "../sections/Ongoing";
 import Complete from "../sections/Complete";
 import Maps from "../sections/Maps";
 import Analytics from "../sections/Analytics";
+import Questionaires from "../sections/Questionaires";
+import Reports from "../sections/Reports";
 
 function LeftTabsExample() {
   return (
@@ -33,6 +35,12 @@ function LeftTabsExample() {
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="sixth">Analytics</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="seventh">Questionaires</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="eighth">Reports</Nav.Link>
             </Nav.Item>
           </Nav>
         </Col>
@@ -61,6 +69,12 @@ function LeftTabsExample() {
             </Tab.Pane>
             <Tab.Pane eventKey="sixth">
               <Analytics />
+            </Tab.Pane>
+            <Tab.Pane eventKey="seventh">
+              <Questionaires />
+            </Tab.Pane>
+            <Tab.Pane eventKey="eighth">
+              <Reports />
             </Tab.Pane>
           </Tab.Content>
         </Col>
